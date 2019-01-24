@@ -1,32 +1,47 @@
-.App {
+.container{
+  overflow: hidden;
+}
+.NavBar{
+  padding: 1%;
+  background: rgb(30,87,153); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+  display: inline-flex;
+  width: 100vw;
+}
+.LogoHeart{
+  display: inline-flex;
+
+}
+.LogoHeart:hover{
+cursor: pointer;
+}
+.Logo{
+padding-right: 10px;
+}
+
+.Heart{
+  border-right-style: solid;
+  padding-right: 20%;
+}
+.Home{
+  width: 100vw;
   text-align: center;
+  height:90vh;
+background-color: #dfe3ee;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.Intro{
+  margin:5%;
+  letter-spacing: 2px;
+  position: relative;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
 }
+h1{
+  font-family: 'Rakkas', cursive;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
