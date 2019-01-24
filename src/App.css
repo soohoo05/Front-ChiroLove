@@ -1,47 +1,176 @@
 .container{
-  overflow: hidden;
+     overflow: hidden;
 }
-.NavBar{
-  padding: 1%;
-  background: rgb(30,87,153); /* Old browsers */
-background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-  display: inline-flex;
+ .NavBar{
+     padding: 1%;
+     background: rgb(30,87,153);
+    /* Old browsers */
+     background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%);
+    /* FF3.6-15 */
+     background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+     background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
+    /* IE6-9 */
+     display: inline-flex;
+     width: 100vw;
+}
+ .LogoHeart{
+     display: inline-flex;
+     z-index: 1;
+}
+ .LogoHeart:hover{
+     cursor: pointer;
+}
+ .Logo{
+     padding-right: 10px;
+}
+ .Home{
+     text-align: center;
+     height:95vh;
+     background-image: url('./images/ChiroBackground.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+ .Intro{
+     margin: 50px;
+}
+ .HomeTAB{
+     border-radius: 2000px;
+     padding: 20px;
+     background-color: #8b9dc3;
+     letter-spacing: 3px;
+     position: relative;
+     top: 50%;
+     transform: translateY(-50%);
+     -webkit-transform: translateY(-50%);
+     -ms-transform: translateY(-50%);
+}
+ .SearchDiv{
+     position: absolute;
+     display: inline-flex;
+     width:100vw;
+     height: 5vh;
+    /* Firefox */
+     display: -moz-box;
+     -moz-box-pack: center;
+     -moz-box-align: center;
+    /* Safari and Chrome */
+     display: -webkit-box;
+     -webkit-box-pack: center;
+     -webkit-box-align: center;
+    /* W3C */
+     box-pack: center;
+     box-align: center;
+     z-index: 0;
+}
+ .NavSearchInput{
+     height:30px;
+     padding: 20px;
+     color: black;
+     background-color: #dfe3ee;
+     border-radius: 10px;
+     border-style: double;
+     box-shadow: 3px 4px 5px 0px #000000;
+     font-family: 'Rakkas', cursive;
+}
+ .NavButton {
+     -moz-box-shadow: 3px 4px 0px 0px #899599;
+     -webkit-box-shadow: 3px 4px 0px 0px #899599;
+     box-shadow: 3px 4px 5px 0px #000000;
+     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+     background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+     background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+     background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+     background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+     background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+     background-color:#ededed;
+     -moz-border-radius:15px;
+     -webkit-border-radius:15px;
+     border-radius:15px;
+     border:1px solid #d6bcd6;
+     display:inline-block;
+     cursor:pointer;
+     color:#3a8a9e;
+     font-family:Arial;
+     text-decoration:none;
+     text-shadow:0px 1px 0px #e1e2ed;
+     margin-left: 10px;
+     width: 60px;
+     height:50px;
+     margin-top: -1px;
+     font-family: 'Rakkas', cursive;
+}
+ .NavButton:hover {
+     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
+     background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+     background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+     background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+     background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+     background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
+     background-color:#bab1ba;
+}
+ .NavButton:active {
+     position:relative;
+     top:1px;
+}
+ .Or{
+     margin-top: 7px;
+     margin-left: 20px;
+}
+ .Locate{
+     margin-left: 20px;
+     width: 100px;
+}
+.WholeSearchDiv{
   width: 100vw;
+  background-color: #8b9dc3;
+  height: 100vh;
+  padding: 50px;
 }
-.LogoHeart{
-  display: inline-flex;
-
-}
-.LogoHeart:hover{
-cursor: pointer;
-}
-.Logo{
-padding-right: 10px;
-}
-
-.Heart{
-  border-right-style: solid;
-  padding-right: 20%;
-}
-.Home{
-  width: 100vw;
-  text-align: center;
-  height:90vh;
-background-color: #dfe3ee;
-}
-.Intro{
-  margin:5%;
-  letter-spacing: 2px;
-  position: relative;
-top: 50%;
-transform: translateY(-50%);
--webkit-transform: translateY(-50%);
--ms-transform: translateY(-50%);
-}
-h1{
+.searchFormDiv{
+  background-color:#dfe3ee;
+  width: 20vw;
+  padding: 20px;
   font-family: 'Rakkas', cursive;
+  letter-spacing: 2px;
+  border-radius: 20px;
+}
+.CustomInput{
+  margin-left: -5px;
+  height: 30px;
+  width: 10vw;
+  border-radius: 20px;
+  background-color: lightgrey;
+  color: black;
+  padding-left: 10px;
+  box-shadow: 3px 4px 5px 0px #000000;
 
+}
+.CustomDiv{
+  margin:20px;
+}
+.CustomForm{
+  height:70vh;
+}
+.CustomButton{
+margin-left: 10px;
+letter-spacing: 1px;
+}
+.fieldset{
+  height: 70vh;
+  border-radius: 20px;
+
+}
+.CustomNavButton{
+  width:80px;
+}
+ h1{
+     font-family: 'Rakkas', cursive;
+}
+body{
+  overflow: hidden;
 }

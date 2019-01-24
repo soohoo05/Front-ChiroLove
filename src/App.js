@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Button} from 'semantic-ui-react'
 import {Switch, Route} from 'react-router-dom'
 import ChiropractorDisplay from './routes/ChiropractorDisplay'
 import NavBar from './components/NavBar'
-import Home from './components/Home'
+import Home from './routes/Home'
+import Search from './routes/Search'
 class App extends Component {
   render() {
     return (
@@ -13,6 +13,7 @@ class App extends Component {
       <Switch>
         <Route exact path ="/" component={Home}/>
         <Route exact path="/Chiropractor/:id" component={ChiropractorDisplay}/>
+        <Route exact path ="/Search" component={Search}/>
       </Switch>
     </div>
     );
