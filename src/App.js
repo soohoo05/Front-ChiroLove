@@ -5,6 +5,7 @@ import ChiropractorDisplay from './routes/ChiropractorDisplay'
 import NavBar from './components/NavBar'
 import Home from './routes/Home'
 import Search from './routes/Search'
+
 class App extends Component {
   render() {
     return (

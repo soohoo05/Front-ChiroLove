@@ -126,9 +126,10 @@
      width: 100px;
 }
 .WholeSearchDiv{
+  display:inline-flex;
   width: 100vw;
   background-color: #8b9dc3;
-  height: 100vh;
+  height: 90vh;
   padding: 50px;
 }
 .searchFormDiv{
@@ -168,9 +169,18 @@ letter-spacing: 1px;
 .CustomNavButton{
   width:80px;
 }
+.ResultDiv{
+  background-color: #dfe3ee;
+  border-radius: 20px;
+  margin-left: 30px;
+  width:60vw;
+  overflow: scroll;
+  overflow-x: hidden;
+}
  h1{
      font-family: 'Rakkas', cursive;
 }
 body{
   overflow: hidden;
+  background-color: darkgrey;
 }
