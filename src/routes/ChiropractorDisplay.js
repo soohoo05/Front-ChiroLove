@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { connect } from "react-redux";
 
 class ChiropractorDisplay extends React.Component {
   render() {
@@ -6,4 +7,9 @@ class ChiropractorDisplay extends React.Component {
   }
 }
 
-export default ChiropractorDisplay;
+const mapStateToProps = theState => {
+  return {
+    Query: theState.QueryMore
+  };
+};
+export default connect(mapStateToProps)(ChiropractorDisplay);

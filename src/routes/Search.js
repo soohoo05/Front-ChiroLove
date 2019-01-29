@@ -10,10 +10,10 @@ class Search extends React.Component {
     address:"",
     city:"",
     state:"",
-    zip:""
+    zip:"",
+    mount:false
   }
   changeHandler = (e) =>{
-    console.log(e.target.name+" ssss " + "")
     this.setState({
       [e.target.name]:e.target.value
     })
@@ -23,6 +23,7 @@ class Search extends React.Component {
     let address=this.state.address+" "+this.state.city+", "+this.state.state+" "+this.state.zip
     let parsed=parser.parseLocation(address)
     this.props.submitQuery(this.state)
+    this.setState({mount:true})
   }
 
   render() {
@@ -35,7 +36,7 @@ class Search extends React.Component {
           <SearchForm state={this.state} changeHandler={this.changeHandler} submitHandler={this.submitHandler}/>
         </div>
         </Bounce>
-        <SearchResults />
+      {this.state.mount ?  <SearchResults /> :null}
       </div>
     </Fade>
     );

@@ -1,24 +1,50 @@
-import React from 'react';
-import { connect } from "react-redux"
-
+import React from "react";
+import { connect } from "react-redux";
+import Fade from "react-reveal/Fade";
+import axios from "axios";
+import Result from "./Result.js";
 class SearchResults extends React.Component {
-  state={
-    results:[]
+  state = {
+    results: []
+  };
+  componentDidMount() {
+    let address =
+      this.props.address +
+      " " +
+      this.props.city +
+      ", " +
+      this.props.state +
+      " " +
+      this.props.zip;
+    axios.get(`http://localhost:3000/chiropractors/1`).then(res => {
+      this.setState({ results: res.data.results });
+    });
   }
-  componentDidUpdate(){
-    console.log(this.props)
-  }
+  showDiv = () => {
+    let results = this.state.results.map(result => (
+      <Result Query={result} key={result.id} />
+    ));
+    if (this.props.address) {
+      return (
+        <Fade>
+          <div className="ResultDiv">{results}</div>
+        </Fade>
+      );
+    } else {
+      return null;
+    }
+  };
   render() {
-    return <div className="ResultDiv"></div>;
+    return this.showDiv();
   }
 }
 
-const mapStateToProps=(theState)=>{
-  return{
-    address:theState.search.address,
-    city:theState.search.city,
-    state:theState.search.state,
-    zip:theState.search.state
-      }
-    }
+const mapStateToProps = theState => {
+  return {
+    address: theState.search.address,
+    city: theState.search.city,
+    state: theState.search.state,
+    zip: theState.search.zip
+  };
+};
 export default connect(mapStateToProps)(SearchResults);

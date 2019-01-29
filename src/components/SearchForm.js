@@ -2,7 +2,10 @@ import React from "react";
 class searchForm extends React.Component {
   render() {
     return (
-      <form className="form-horizontal CustomForm" onSubmit={(e)=>this.props.submitHandler(e)}>
+      <form
+        className="form-horizontal CustomForm"
+        onSubmit={e => this.props.submitHandler(e)}
+      >
         <fieldset className="fieldset">
           <legend>Location</legend>
 
@@ -16,9 +19,8 @@ class searchForm extends React.Component {
                 placeholder="Address"
                 className="input-xlarge CustomInput"
                 value={this.props.state.address}
-                onChange={(e)=>this.props.changeHandler(e)}
+                onChange={e => this.props.changeHandler(e)}
               />
-
             </div>
           </div>
 
@@ -32,7 +34,7 @@ class searchForm extends React.Component {
                 placeholder="City"
                 className="input-xlarge CustomInput"
                 value={this.props.state.city}
-                onChange={(e)=>this.props.changeHandler(e)}
+                onChange={e => this.props.changeHandler(e)}
               />
             </div>
           </div>
@@ -47,7 +49,7 @@ class searchForm extends React.Component {
                 placeholder="State / Province / Region"
                 className="input-xlarge CustomInput"
                 value={this.props.state.state}
-                onChange={(e)=>this.props.changeHandler(e)}
+                onChange={e => this.props.changeHandler(e)}
               />
             </div>
           </div>
@@ -62,7 +64,7 @@ class searchForm extends React.Component {
                 placeholder="Zip or postal code"
                 className="input-xlarge CustomInput"
                 value={this.props.state.zip}
-                onChange={(e)=>this.props.changeHandler(e)}
+                onChange={e => this.props.changeHandler(e)}
               />
             </div>
           </div>

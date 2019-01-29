@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "address-validator": "^0.2.3",
+    "axios": "^0.18.0",
     "parse-address": "^1.1.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
