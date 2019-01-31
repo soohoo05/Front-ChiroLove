@@ -13,11 +13,12 @@ class SearchResults extends React.Component {
       this.setState({ results: res.data.results });
     });
   }
+
   showDiv = () => {
     let results = this.state.results.map(result => (
       <Result Query={result} key={result.id} />
     ));
-    if (this.props.address) {
+    if (this.props.address || this.props.search) {
       return (
         <Fade>
           <div className="ResultDiv">{results}</div>
@@ -28,12 +29,14 @@ class SearchResults extends React.Component {
     }
   };
   render() {
+    console.log("hey")
     return this.showDiv();
   }
 }
 
 const mapStateToProps = theState => {
   return {
+    search: theState.search,
     address: theState.search.address,
     city: theState.search.city,
     state: theState.search.state,

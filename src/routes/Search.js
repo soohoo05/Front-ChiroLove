@@ -21,10 +21,22 @@ class Search extends React.Component {
     e.preventDefault()
 
     this.props.submitQuery(this.state)
+    this.setState({
+      mount:true,
+      address:"",
+      city:"",
+      state:"",
+      zip:""
+    })
+  }
+componentDidMount(){
+  if(typeof(this.props.address)==="string"){
     this.setState({mount:true})
   }
 
+}
   render() {
+    console.log(this.state.mount)
     return (
       <Fade duration={2500}>
 
@@ -46,6 +58,11 @@ const mapDispatchToProps=(dispatch)=>{
   }
 }
 
+const mapStateToProps= (theState)=>{
+  console.log(theState.search)
+  return{
+    address: theState.search
+  }
+}
 
-
-export default connect(null,mapDispatchToProps)(Search);
+export default connect(mapStateToProps,mapDispatchToProps)(Search);
