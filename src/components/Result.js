@@ -21,7 +21,7 @@ class Result extends React.Component {
             <h1>{Query.name}</h1>
           </div>
           <div className="IRSMDiv">
-            <img src={Query.icon} />
+            <img src={Query.icon} alt="icon"/>
             <h1 className="Rating">
               Rating: <Rating number={Query.rating} />
             </h1>

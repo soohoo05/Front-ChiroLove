@@ -194,11 +194,11 @@ letter-spacing: 1px;
 .Rating{
   position: relative;
   margin-top: 25px;
-  margin-left: 25vw;
+  margin-left: 5%;
 }
 .QueryButton{
-position: relative;
-margin-left: 10vw;
+  position: relative;
+left:35%;
 }
 .fa-star{
   border-style: solid;
@@ -206,7 +206,20 @@ margin-left: 10vw;
 .checked{
   color: orange;
 }
-
+.Display{
+  background-color: #8b9dc3;
+  height:95vh;
+  text-align: center;
+  padding-top: 5%;
+}
+.googlemap{
+  margin-top: 20px;
+  
+}
+.gmiframe{
+  height:40vh;
+  width:40vw;
+}
  h1{
      font-family: 'Rakkas', cursive;
 }

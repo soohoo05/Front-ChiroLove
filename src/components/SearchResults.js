@@ -8,14 +8,7 @@ class SearchResults extends React.Component {
     results: []
   };
   componentDidMount() {
-    let address =
-      this.props.address +
-      " " +
-      this.props.city +
-      ", " +
-      this.props.state +
-      " " +
-      this.props.zip;
+
     axios.get(`http://localhost:3000/chiropractors/1`).then(res => {
       this.setState({ results: res.data.results });
     });

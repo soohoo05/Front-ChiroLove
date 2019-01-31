@@ -3,7 +3,6 @@ import SearchForm from "../components/SearchForm";
 import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
 import { connect } from "react-redux"
-import parser from 'parse-address'
 import SearchResults from '../components/SearchResults'
 class Search extends React.Component {
   state={
@@ -20,8 +19,7 @@ class Search extends React.Component {
   }
   submitHandler = (e)=>{
     e.preventDefault()
-    let address=this.state.address+" "+this.state.city+", "+this.state.state+" "+this.state.zip
-    let parsed=parser.parseLocation(address)
+
     this.props.submitQuery(this.state)
     this.setState({mount:true})
   }
