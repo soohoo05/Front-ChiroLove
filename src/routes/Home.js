@@ -6,6 +6,7 @@ import Fade from "react-reveal/Fade";
 
 class Home extends React.Component {
   render() {
+    
     return (
       <Fade duration={2500}>
         <div className="Home">

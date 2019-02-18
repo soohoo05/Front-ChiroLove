@@ -3,10 +3,10 @@ import Rating from "./Rating";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import Fade from "react-reveal/Fade";
-
+import {getMore} from '../actions/actions'
 class Result extends React.Component {
   clickHandler = () => {
-    this.props.SeeMore(this.props.Query);
+    this.props.SeeMore(this.props.Query.place_id);
     let name = this.props.Query.name.replace(/[^\w\s]/gi, "");
     let splitted = name.split(" ");
     let joined = splitted.join("+");
@@ -39,7 +39,7 @@ class Result extends React.Component {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    SeeMore: Query => dispatch({ type: "SETQUERYDISPLAY", payload: Query })
+    SeeMore: Query => dispatch(getMore(Query))
   };
 };
 

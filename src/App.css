@@ -47,6 +47,14 @@
      -webkit-transform: translateY(-50%);
      -ms-transform: translateY(-50%);
 }
+.Reviews{
+  overflow: auto;
+}
+.aReview{
+  border-style: solid;
+  margin: 20px;
+  padding:20px;
+}
  .SearchDiv{
      position: absolute;
      display: inline-flex;
@@ -209,16 +217,29 @@ left:35%;
 .Display{
   background-color: #8b9dc3;
   height:95vh;
-  text-align: center;
+  width:50vw;
   padding-top: 5%;
+  padding-left: 30px;
+  text-align: center;
+}
+.wholeDisplay{
+  display: inline-flex;
 }
 .googlemap{
   margin-top: 20px;
-  
+
+}
+.Reviews{
+  background-color: lightgrey;
+  height: 50vh;
+  margin-right: 30px;
+  border-style: solid;
+
+
 }
 .gmiframe{
-  height:40vh;
-  width:40vw;
+  height:30vh;
+  width:30vw;
 }
  h1{
      font-family: 'Rakkas', cursive;

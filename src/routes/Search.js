@@ -10,7 +10,6 @@ class Search extends React.Component {
     city:"",
     state:"",
     zip:"",
-    mount:false
   }
   changeHandler = (e) =>{
     this.setState({
@@ -30,13 +29,12 @@ class Search extends React.Component {
     })
   }
 componentDidMount(){
-  if(typeof(this.props.address)==="string"){
+  if(typeof(this.props.address)==="string" || this.props.mount===true){
     this.setState({mount:true})
   }
 
 }
   render() {
-    console.log(this.state.mount)
     return (
       <Fade duration={2500}>
 
@@ -46,7 +44,7 @@ componentDidMount(){
           <SearchForm state={this.state} changeHandler={this.changeHandler} submitHandler={this.submitHandler}/>
         </div>
         </Bounce>
-      {this.state.mount ?  <SearchResults /> :null}
+  <SearchResults />
       </div>
     </Fade>
     );
@@ -59,9 +57,9 @@ const mapDispatchToProps=(dispatch)=>{
 }
 
 const mapStateToProps= (theState)=>{
-  console.log(theState.search)
   return{
-    address: theState.search
+    address: theState.search,
+    mount:theState.mount
   }
 }
 
